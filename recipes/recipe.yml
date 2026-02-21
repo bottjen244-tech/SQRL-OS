@@ -28,6 +28,3 @@ modules:
         - org.videolan.VLC
         - io.missioncenter.MissionCenter
         - com.protonvpn.www
-
-  - type: firstboot
-    yafti: true
