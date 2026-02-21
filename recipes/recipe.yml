@@ -10,8 +10,6 @@ modules:
     remove:
       - firefox
       - firefox-langpacks
-      - elisa
-      - dragon
 
   - type: default-flatpaks
     notify: true
