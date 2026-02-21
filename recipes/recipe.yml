@@ -1,5 +1,5 @@
 # yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
-name: SQRL-OS
+name: sqrl-os
 description: A clean, Flatpak-only KDE gaming image with NVIDIA drivers for squirrels.
 
 base-image: ghcr.io/ublue-os/kinoite-nvidia
