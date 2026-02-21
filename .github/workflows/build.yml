@@ -53,7 +53,7 @@ jobs:
         with:
           # Replace YOUR_GITHUB_USERNAME with your actual username below
           image_name: sqrl-os
-          image_repo: ghcr.io/YOUR_GITHUB_USERNAME
+          image_repo: ghcr.io/bottjen244-tech
           image_tag: latest
           version: 41
           variant: 'Kinoite' # Because you are using KDE
