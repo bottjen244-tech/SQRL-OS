@@ -58,12 +58,11 @@ jobs:
           version: 41
           variant: 'Kinoite' # Because you are using KDE
           arch: x86_64
-          output_folder: ${{ github.workspace }}/iso_output
           extra_boot_params: 'inst.sdboot=1'
 
       - name: Upload ISO Artifact
         uses: actions/upload-artifact@v4
         with:
           name: sqrl-os-iso
-          path: ${{ github.workspace }}/iso_output/*.iso
+          path: ./**/*.iso
           if-no-files-found: error
