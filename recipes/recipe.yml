@@ -3,7 +3,7 @@ name: sqrl-os
 description: A clean, Flatpak-only KDE gaming image with NVIDIA drivers for squirrels.
 
 base-image: ghcr.io/ublue-os/kinoite-nvidia
-image-version: 41
+image-version: 42
 
 modules:
   - type: rpm-ostree
@@ -26,3 +26,4 @@ modules:
         - org.videolan.VLC
         - io.missioncenter.MissionCenter
         - com.protonvpn.www
+        - org.openrgb.OpenRGB
