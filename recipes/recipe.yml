@@ -3,11 +3,10 @@ name: SQRL-OS
 description: A clean, Flatpak-only KDE gaming image with NVIDIA drivers for squirrels.
 
 base-image: ghcr.io/ublue-os/kinoite-nvidia
-image-version: 41 # Using 41 is more stable than 'latest' for builds
+image-version: 41
 
 modules:
   - type: rpm-ostree
-    description: Stripping native RPMs to move towards a Flatpak-only workflow
     remove:
       - firefox
       - firefox-langpacks
@@ -20,23 +19,15 @@ modules:
       repo-url: https://dl.flathub.org/repo/flathub.flatpakrepo
       repo-name: flathub
       install:
-        # Web & Communication
         - org.mozilla.firefox
         - com.discordapp.Discord
-        
-        # Gaming
         - com.valvesoftware.Steam
         - com.pokemmo.PokeMMO
         - com.vysp3r.ProtonPlus
-        
-        # Productivity & Media
         - org.libreoffice.LibreOffice
         - org.videolan.VLC
-        
-        # System Tools
         - io.missioncenter.MissionCenter
         - com.protonvpn.www
 
   - type: firstboot
     yafti: true
-    custom-flathub: true
