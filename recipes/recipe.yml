@@ -1,24 +1,17 @@
----
 # yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
-# image will be published to ghcr.io/<user>/<name>
 name: SQRL-OS
-# description will be included in the image's metadata
 description: A clean, Flatpak-only KDE gaming image with NVIDIA drivers for squirrels.
 
-# the base image to build on top of (FROM) and the version tag to use
 base-image: ghcr.io/ublue-os/kinoite-nvidia
-image-version: latest # latest is also supported if you want new updates ASAP
+image-version: 41 # Using 41 is more stable than 'latest' for builds
 
-# module configuration, executed in order
-# you can include multiple instances of the same module
 modules:
   - type: rpm-ostree
     description: Stripping native RPMs to move towards a Flatpak-only workflow
     remove:
-      - firefox # Removing native Firefox to use Flatpak version
+      - firefox
       - firefox-langpacks
-      - kwrite    # Removing default KDE editor (optional, but follows 'strip' goal)
-      - elisa-player
+      - elisa
       - dragon
 
   - type: default-flatpaks
@@ -46,4 +39,4 @@ modules:
 
   - type: firstboot
     yafti: true
-    custom-flathub: true # Ensures Flathub is the primary store
+    custom-flathub: true
